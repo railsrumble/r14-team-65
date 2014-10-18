@@ -35,8 +35,6 @@ GEM
       multi_json
     arel (5.0.1.20140414130214)
     awesome_print (1.2.0)
-    bootstrap-sass (3.2.0.2)
-      sass (~> 3.2)
     bourbon (3.2.3)
       sass (~> 3.2)
       thor
@@ -51,9 +49,6 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    capybara-webkit (1.3.0)
-      capybara (>= 2.0.2, < 2.5.0)
-      json
     coderay (1.1.0)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
@@ -273,10 +268,8 @@ DEPENDENCIES
   acts-as-taggable-on
   airbrake
   awesome_print
-  bootstrap-sass
   bourbon (~> 3.2.1)
   byebug
-  capybara-webkit (>= 1.2.0)
   coffee-rails
   database_cleaner
   delayed_job_active_record

@@ -4,7 +4,6 @@ ruby "2.1.2"
 
 gem "acts-as-taggable-on"
 gem "airbrake"
-gem "bootstrap-sass"
 gem "bourbon", "~> 3.2.1"
 gem "coffee-rails"
 gem "delayed_job_active_record"
@@ -44,7 +43,7 @@ group :development, :test do
 end
 
 group :test do
-  gem "capybara-webkit", ">= 1.2.0"
+  #gem "capybara-webkit", ">= 1.2.0"
   gem "database_cleaner"
   gem "formulaic"
   gem "launchy"
