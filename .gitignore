@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-*.rbc
-capybara-*.html
-.rspec
-/log
-/tmp
-/db/*.sqlite3
-/public/system
-/coverage/
-=======
 !.keep
 *.DS_Store
 *.swo
@@ -24,7 +14,6 @@ capybara-*.html
 /db/*.sqlite3
 /public/system
 /coverage/*
->>>>>>> suspenders bootstrap
 /spec/tmp
 **.orig
 rerun.txt
@@ -47,8 +36,4 @@ config/secrets.yml
 # if using bower-rails ignore default bower_components path bower.json files
 /vendor/assets/bower_components
 *.bowerrc
-<<<<<<< HEAD
 bower.json
-=======
-bower.json
->>>>>>> suspenders bootstrap
