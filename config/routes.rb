@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
 
+  root to: 'visitors#index'
+
   resources :users
   resources :gists
   resources :tags, only: :index
-  root to: 'visitors#index'
+  resources :searches, only: :index
 
   get '/auth/:provider/callback' => 'sessions#create'
   get '/signin' => 'sessions#new', as: :signin
