@@ -72,6 +72,8 @@ GEM
     delayed_job_active_record (4.0.2)
       activerecord (>= 3.0, < 4.2)
       delayed_job (>= 3.0, < 4.1)
+    descendants_tracker (0.0.4)
+      thread_safe (~> 0.3, >= 0.3.1)
     diff-lcs (1.2.5)
     dotenv (1.0.2)
     dotenv-rails (1.0.2)
@@ -96,6 +98,14 @@ GEM
       activesupport
       capybara
       i18n
+    github_api (0.12.1)
+      addressable (~> 2.3)
+      descendants_tracker (~> 0.0.4)
+      faraday (~> 0.8, < 0.10)
+      hashie (>= 3.2)
+      multi_json (>= 1.7.5, < 2.0)
+      nokogiri (~> 1.6.3)
+      oauth2
     haml (4.0.5)
       tilt
     haml-rails (0.5.3)
@@ -275,6 +285,7 @@ DEPENDENCIES
   factory_girl_rails
   flutie
   formulaic
+  github_api
   haml-rails
   high_voltage
   i18n-tasks

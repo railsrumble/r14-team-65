@@ -2,13 +2,15 @@ source "https://rubygems.org"
 
 ruby "2.1.2"
 
+gem "acts-as-taggable-on"
 gem "airbrake"
-gem 'bootstrap-sass'
+gem "bootstrap-sass"
 gem "bourbon", "~> 3.2.1"
 gem "coffee-rails"
 gem "delayed_job_active_record"
 gem "email_validator"
 gem "flutie"
+gem "github_api"
 gem "haml-rails"
 gem "high_voltage"
 gem "i18n-tasks"
@@ -26,7 +28,6 @@ gem "simple_form"
 gem "title"
 gem "uglifier"
 gem "unicorn"
-gem 'acts-as-taggable-on'
 
 group :development do
   gem "spring"
