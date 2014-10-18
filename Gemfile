@@ -27,6 +27,7 @@ gem "simple_form"
 gem "title"
 gem "uglifier"
 gem "unicorn"
+gem 'honeybadger'
 
 group :development do
   gem "spring"
