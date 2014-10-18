@@ -2,6 +2,10 @@ class User < ActiveRecord::Base
 
   has_many :gists
 
+  has_many :tags, through: :gists
+  has_many :gist_files, through: :gists
+
+
   def self.create_with_omniauth(auth)
     create! do |user|
       user.provider = auth['provider']
