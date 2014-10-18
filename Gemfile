@@ -3,7 +3,6 @@ source "https://rubygems.org"
 ruby "2.1.2"
 
 gem "airbrake"
-gem 'bootstrap-sass'
 gem "bourbon", "~> 3.2.1"
 gem "coffee-rails"
 gem "delayed_job_active_record"
