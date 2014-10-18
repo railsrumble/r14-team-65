@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141018133127) do
+ActiveRecord::Schema.define(version: 20141018152046) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20141018133127) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
+    t.text     "raw_content"
   end
 
   add_index "gist_files", ["gist_id"], name: "index_gist_files_on_gist_id", using: :btree
@@ -45,7 +46,7 @@ ActiveRecord::Schema.define(version: 20141018133127) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "github_id"
+    t.string   "github_id"
   end
 
   add_index "gists", ["user_id"], name: "index_gists_on_user_id", using: :btree

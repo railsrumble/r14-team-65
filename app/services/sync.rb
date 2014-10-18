@@ -21,6 +21,10 @@ class Sync
     @gists ||= github.gists.list
   end
 
+  def get_gist(id)
+    github.gists.get(id)
+  end
+
   def clean!
     user.gists.where.not(github_id: gists.map(&:id)).destroy_all
   end
@@ -31,10 +35,9 @@ class Sync
 
   def update!
     gists.each do |gist|
-      user.gists.find_or_create_by(github_id: gist.id) do |_|
-        gist.files.each do |name, info|
-          _.gist_files.build(name: name)
-        end
+      _ = Gist.find_or_create_by(github_id: gist.id, user_id: user.id)
+      get_gist(gist.id).files.each do |name, info|
+        _.gist_files.create(name: name, raw_content: info.content)
       end
     end
   end
