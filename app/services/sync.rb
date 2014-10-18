@@ -39,6 +39,8 @@ class Sync
       _.update(description: gist.description)
       get_gist(gist.id).files.each do |name, info|
         _.gist_files.create(name: name, raw_content: info.content)
+        _.tag_list.add(info.language)
+        _.save
       end
     end
   end

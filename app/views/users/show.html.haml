@@ -4,11 +4,13 @@
   %thead
     %tr
       %th Gist
+      %th Tags
       %th Files
   %tbody
     - @user.gists.each do |gist|
       %tr
         %td= gist.description || gist.gist_files.first.name
+        %td= gist.tag_list.to_s
         %td
           - gist.gist_files.each do |file|
             = file.name
