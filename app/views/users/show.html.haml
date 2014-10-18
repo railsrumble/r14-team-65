@@ -10,7 +10,11 @@
     - @user.gists.each do |gist|
       %tr
         %td= gist.description || gist.gist_files.first.name
-        %td= gist.tag_list.to_s
+        %td
+          = form_for gist, remote: true do |f|
+            = f.text_field :tag_list, class: 'gist_tag_list'
+            = f.hidden_field :id
+            = f.submit 'save tags'
         %td
           - gist.gist_files.each do |file|
             = file.name
