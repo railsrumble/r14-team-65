@@ -36,6 +36,7 @@ class Sync
   def update!
     gists.each do |gist|
       _ = Gist.find_or_create_by(github_id: gist.id, user_id: user.id)
+      _.update(description: gist.description)
       get_gist(gist.id).files.each do |name, info|
         _.gist_files.create(name: name, raw_content: info.content)
       end
