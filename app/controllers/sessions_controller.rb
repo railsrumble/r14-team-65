@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
     user.token = auth['credentials']['token']
     user.save
     session[:user_id] = user.id
-    redirect_to root_url, :notice => 'Signed in!'
+    redirect_to user_url(current_user), :notice => 'Signed in!'
   end
 
   def destroy
