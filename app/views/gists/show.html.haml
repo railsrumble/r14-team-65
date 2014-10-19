@@ -1,6 +1,9 @@
 - gist ||= @gist
 .gist-detail-header.clearfix
   .gist-title
+    %a.btn.btn-primary.btn-xs.back{:href => user_path(gist.user)}
+      %i.fa.fa-chevron-left.fa2x
+        Back to your gists
     = image_tag(gist.owner_avatar, class: "avatar")
     %h3
       = gist.title
