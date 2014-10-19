@@ -4,24 +4,3 @@
 
 %section.results
   = render "users/results", gists: user.gists
-
-%table
-  %thead
-    %tr
-      %th Gist
-      %th Tags
-      %th Files
-  %tbody
-
-    - user.gists.each do |gist|
-      %tr
-        %td= gist.description || gist.gist_files.first.name
-        %td
-          = form_for gist, remote: true do |f|
-            = f.text_field :tag_list, class: 'gist_tag_list'
-            = f.hidden_field :id
-            = f.submit 'save tags'
-        %td
-          - gist.gist_files.each do |file|
-            = file.name
-            %br
