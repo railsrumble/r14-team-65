@@ -12,4 +12,4 @@
 - if gist.forked?
   .single-info
     %i.fa.fa-code-fork
-    = " Forked from #{link_to gist.fork_url}".html_safe
+    = " Forked from #{link_to gist.fork_url, gist.fork_url, target: '_blank'}".html_safe

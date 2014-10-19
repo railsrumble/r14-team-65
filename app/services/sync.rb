@@ -44,7 +44,7 @@ class Sync
 
   def fork_url(gist)
     if gist.try :fork_of
-      gist.fork_of.url
+      gist.fork_of.html_url
     end
   end
 
