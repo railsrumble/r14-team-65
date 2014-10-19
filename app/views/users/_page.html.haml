@@ -1,6 +1,16 @@
-%h3= "#{user.name if user.name} Gists!"
-= render "layouts/searchbar"
-= render "layouts/tag_cloud", user: user
+%h4= "#{user.name if user.name} Gists!"
 
-%section.results
-  = render "users/results", gists: user.gists
+- if user.gists.count > 0
+
+  = render "layouts/searchbar"
+  = render "layouts/tag_cloud", user: user
+
+  %section.results
+    = render "users/results", gists: user.gists
+
+- else
+
+  %center
+    %h4= "You have no gists, yet. Go import them all!"
+    .nogist_image= image_tag( 'octocat_sad.gif' )
+    = link_to 'Sync your gists now!', sync_path , remote: true, method: :post, class: 'sync_button btn btn-primary btn-lg'
