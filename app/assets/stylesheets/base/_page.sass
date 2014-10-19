@@ -126,6 +126,9 @@ section.results
       position: relative
       height: 30px
 
+      @media all and (max-width: 767px)
+        height: initial
+
       .description
         line-height: 17px
         height: 34px
@@ -136,6 +139,14 @@ section.results
         left: 0
         top: 0
 
+        @media all and (max-width: 767px)
+          line-height: initial
+          height: initial
+          overflow: auto
+          width: 100%
+          position: relative
+          margin-bottom: .5em
+
       .gist-actions
         min-width: 230px
         width: 40%
@@ -143,6 +154,11 @@ section.results
         position: absolute
         top: 0
         left: 60%
+
+        @media all and (max-width: 767px)
+          width: 100%
+          left: 0
+          position: relative
 
 .selectize-control
   border: 0px
@@ -159,6 +175,12 @@ section.results
       background-color: white
       padding: 5px
       border-bottom: 2px solid #2196f3
+
+    @media all and (max-width: 767px)
+      background-color: white
+      padding: 5px
+      border-bottom: 2px solid #2196f3
+
 
     div
       background: transparent

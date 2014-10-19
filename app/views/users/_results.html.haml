@@ -15,11 +15,11 @@
       .description
         = auto_link(gist.description)
       .gist-actions
-        %a.btn.btn-default.btn-xs{:href => "https://gist.github.com/#{gist.github_id}"}
+        %a.btn.btn-default.btn-xs{href: "https://gist.github.com/#{gist.github_id}", target: '_blank'}
           %i.fa.fa-github
           View in GitHub
-        %a.btn.btn-default.btn-xs{:href => "https://gist.github.com/#{gist.github_id}/download"}
+        %a.btn.btn-default.btn-xs{href: "https://gist.github.com/#{gist.github_id}/download", target: '_blank'}
           %i.fa.fa-cloud-download
           Download
-        %a.btn.btn-primary.btn-xs{:href => gist_path(gist)}
+        %a.btn.btn-primary.btn-xs{href: gist_path(gist)}
           Open
