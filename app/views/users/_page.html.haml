@@ -3,7 +3,7 @@
 = render "layouts/tag_cloud", user: user
 
 %section.results
-  = render "results", gists: user.gists
+  = render "users/results", gists: user.gists
 
 %table
   %thead

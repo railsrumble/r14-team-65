@@ -6,7 +6,7 @@ $ ->
       timer = setTimeout(callback, ms)
   )()
 
-  $("#search").keyup ->
+  $(".container-fluid").on 'keyup', '#search', ->
     delay (=>
       $.ajax(
         url: '/searches/'
@@ -19,7 +19,7 @@ $ ->
       )
     ), 500
 
-  $("section.tags").on 'click', "> span.tag", ->
+  $(".container-fluid").on 'click', "section.tags > span.tag", ->
     $(@).toggleClass 'selected'
     texts = []
     $(@).parent().find('.selected').each ->

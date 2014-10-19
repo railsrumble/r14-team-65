@@ -1,12 +1,12 @@
 %h3 Results:
 
-  - gists.each do |gist|
-    %div.result
-      %h4= gist.gist_files.first.name
-      .small
-        created today
-      .tags
-        %input.gist-input-tags(type="text" value="#{gist.tag_list}")
-      .description
-        = gist.description
+- gists.each do |gist|
+  %div.result
+    %h4= gist.gist_files.first.name
+    .small
+      created today
+    .tags
+      %input.gist-input-tags(type="text" value="#{gist.tag_list}")
+    .description
+      = gist.description
 
