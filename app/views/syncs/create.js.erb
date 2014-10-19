@@ -1,3 +1,4 @@
-pageContent = "<%= escape_javascript(render('users/page', user: current_user)) %>";
+pageContent = "<%= escape_javascript(render('users/page', user: @user)) %>";
 $('.overlay').slideUp(1000);
 $('.container-fluid').html(pageContent);
+$('.sync').removeClass('disabled');
