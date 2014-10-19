@@ -7,20 +7,26 @@
         =raw "<strong>Gist</strong>Genius"
 
       %p
-        GistGenius is a simple app to search and organize your Gists. Login with your GitHub account, sync your gists and you're ready.
+        GistGenius is a simple app to search and organize your gists. Login with your GitHub account, sync your gists and you're ready.
 
       - if not user_signed_in?
         .row.clearfix
           = link_to '<i class="fa fa-rocket"></i> Demo Login'.html_safe, sample_signin_path, :class =>"btn btn-default btn-lg first-button"
           = link_to '<i class="fa fa-github-alt"></i> Sign Up'.html_safe, signin_path, :class =>"btn btn-default btn-lg btn-primary"
   .row.clearfix
-    .col-md-6.column
+    .col-md-4.column
       %h3
-        Tag your gists
+        Tag
       %p
         As soon as you sync your gists, GistGenius tag them with their own language. Then you can add as many tags as you want, and use them to filter and search trough your gists.
-    .col-md-6.column
+    .col-md-4.column
       %h3
-        Search and filter
+        Find
       %p
         GistGenius search inside your gists tags, description and code. You can easily find your gists also using the tags you've created
+    .col-md-4.column
+      %h3
+        Love
+      %p
+        If you love Gist as we do, you'll love it even more with GistGenius. This small app was developed in 48 hours, during the
+        = link_to('RailsRumble 2014', "http://railsrumble.com/")
