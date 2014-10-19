@@ -4,6 +4,12 @@ class SessionsController < ApplicationController
     redirect_to '/auth/github'
   end
 
+  def sample
+    sample_user = User.where(token: "d159172b0b6f5697d9ec5eebbf90c2082f97a798").first
+    session[:user_id] = sample_user.id
+    redirect_to user_url(current_user), :notice => 'Signed in!'
+  end
+
   def create
     auth = request.env["omniauth.auth"]
     user = User.where(:provider => auth['provider'],
