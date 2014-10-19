@@ -7,7 +7,8 @@
   <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Gist Genius" %>">
   <title><%= content_for?(:title) ? yield(:title) : "Gist Genius" %></title>
   <%= stylesheet_link_tag :application, media: "all" %>
-  <%= stylesheet_link_tag "bootstrap.min", media: "all" %>
+  <%= stylesheet_link_tag "bootstrap", media: "all" %>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <%= csrf_meta_tags %>
 </head>
 <body class="<%= body_class %>">
