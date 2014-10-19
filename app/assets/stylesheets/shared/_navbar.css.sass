@@ -2,11 +2,14 @@
 .users-show .mylist
   background-color: $light-gray
 
-li.sync a
-  background-color: $green
-  color: white !important
-  &:hover
+li.sync
+  &.disabled a
     color: black !important
+  a
+    background-color: #2196f3
+    color: white !important
+    &:hover
+      color: black !important
 
 @media all and (max-width: 768px)
   .navbar-collapse li
