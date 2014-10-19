@@ -2,7 +2,7 @@
 .gist-detail-header.clearfix
   .gist-title
     = image_tag(gist.owner_avatar, class: "avatar")
-    %h2
+    %h3
       = gist.title
     = render 'gists/date', gist: gist
     = render 'gists/info', gist: gist

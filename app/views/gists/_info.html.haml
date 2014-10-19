@@ -1,4 +1,8 @@
 .gist-info
+  .date
+    %p
+      %i.fa.fa-calendar-o
+      = " Updated #{distance_of_time_in_words(gist.last_update, Time.now)} ago"
   .single-info
     - if gist.public?
       %i.fa.fa-unlock
