@@ -3,7 +3,7 @@
 - gists.each do |gist|
   %div.result
     %header.gist-title
-      = image_tag(gist.owner_avatar, class: "avatar")
+      = image_tag(gist.owner_avatar, class: "avatar-list")
       .title-block
         %h5
           = link_to gist.title, gist_path(gist)
