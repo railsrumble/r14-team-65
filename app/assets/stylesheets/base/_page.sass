@@ -151,8 +151,10 @@ section.results
     background-color: transparent
     border: 0px
     padding: 0px
-    @include box-shadow(black 0px 0px 0px)
-
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0)
+    -moz-box-shadow:    0px 0px 0px 0px rgba(0, 0, 0, 0)
+    box-shadow:         0px 0px 0px 0px rgba(0, 0, 0, 0)
+    
     &.selected, &:hover
       background-color: white
       padding: 5px
