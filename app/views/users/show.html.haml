@@ -1,6 +1,6 @@
 %h3= "#{@user.name if @user.name} Gists!"
 = render "layouts/searchbar"
-= @user.tags.map(&:name).to_s
+= render "layouts/tag_cloud"
 %table
   %thead
     %tr
