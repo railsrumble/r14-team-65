@@ -13,5 +13,5 @@ GistGenius search inside your gists tags, description and code. You can also fin
 ## Love
 
 If you love Gist as we do, you'll love it even more with GistGenius. This small app was developed in 48 hours, during the [RailsRumble 2014](http://railsrumble.com/).
-[Try it](http://welaika.r14.railsrumble.com/)
+[Try it](http://welaika.r14.railsrumble.com/).
 
