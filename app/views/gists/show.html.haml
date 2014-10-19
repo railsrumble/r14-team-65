@@ -4,14 +4,12 @@
     = image_tag(gist.owner_avatar, class: "avatar")
     %h3
       = gist.title
-    = render 'gists/date', gist: gist
     = render 'gists/info', gist: gist
   %p.description
     = auto_link(gist.description)
   .gist-tags
     %input.gist-input-tags(type="text" value="#{gist.tag_list}" data-gistid ="#{gist.id}")
   = render 'actions', gist: gist
->>>>>>> Gists style, content in user show
 
 .gist-detail.clearfix
   %code{"data-gist-id" => "#{gist.github_id}"}

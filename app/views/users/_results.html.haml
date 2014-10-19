@@ -8,7 +8,7 @@
         %h5
           = link_to gist.title, gist_path(gist)
         = render 'gists/date', gist: gist
-      = render 'gists/info', gist: gist
+      .gist-info= render 'gists/gist_details', gist: gist
     .tags
       %input.gist-input-tags(type="text" value="#{gist.tag_list}" data-gistid ="#{gist.id}")
     .bottom
