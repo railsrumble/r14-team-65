@@ -1,4 +1,20 @@
 .gist-detail-header
+  .gist-title
+    margin-bottom: 10px
+    h2
+      display: inline-block
+      line-height: 35px
+      vertical-align: bottom
+      text-overflow: ellipsis
+      overflow: hidden
+      white-space: nowrap
+      width: 90%
+    img.avatar
+      display: inline-block
+      max-width: 50px
+      max-height: 50px
+      @media screen and (max-width: 750px)
+        display: none
   .date
     display: inline-block
     float: left
@@ -10,10 +26,16 @@
       margin: 0px 5px 0px 5px
   p.description
     display: inline-block
+    width: 100%
   .gist-tags
     margin-bottom: 10px
     float: left
     width: 70%
+    @media screen and (max-width: 750px)
+      width: 100%
+
+    @media screen and (min-width: 751px)
+      width: 70%
   .gist-actions
     margin-bottom: 10px
     float: right

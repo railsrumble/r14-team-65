@@ -7,6 +7,10 @@ class Gist < ActiveRecord::Base
   def forked?
     fork_url.present?
   end
+
+  def title
+  	description || gist_files.first.name
+  end
 end
 
 

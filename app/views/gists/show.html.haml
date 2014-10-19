@@ -1,0 +1,45 @@
+- gist ||= @gist
+.gist-detail-header.clearfix
+  .gist-title
+    = image_tag(gist.owner_avatar, class: "avatar")
+    %h2
+      = gist.title
+  .date
+    %p
+      %i.fa.fa-calendar-o
+      Updated
+      = distance_of_time_in_words(gist.last_update, Time.now)
+      ago
+  .gist-info
+    .single-info
+      - if gist.public?
+        %i.fa.fa-unlock
+      - else
+        %i.fa.fa-lock.tooltip
+    - if gist.starred?
+      .single-info
+        %i.fa.fa-star
+    - if gist.forked?
+      .single-info
+        %i.fa.fa-code-fork
+          = link_to gist.fork_url
+  %p.description
+    = gist.description
+  .gist-tags
+    %input.gist-input-tags(type="text" value="#{gist.tag_list}")
+  .gist-actions
+    %a.btn.btn-default.btn-xs{:href => "https://gist.github.com/#{gist.github_id}"}
+      %i.fa.fa-github
+      View in GitHub
+    %a.btn.btn-primary.btn-xs{:href => "https://gist.github.com/#{gist.github_id}/download"}
+      %i.fa.fa-cloud-download
+      Download
+
+.gist-detail.clearfix
+  %code{"data-gist-id" => "#{gist.github_id}"}
+  .social-container
+    .links
+      %a.prettySocial.fa.fa-twitter.fa-2x{"data-description" => "#{gist.title}", "data-type" => "twitter", "data-url" => "https://gist.github.com/#{gist.github_id}", :href => "#"}
+      %a.prettySocial.fa.fa-facebook.fa-2x{"data-description" => "#{gist.title}", "data-title" => "gist title", "data-type" => "facebook", "data-url" => "https://gist.github.com/#{gist.github_id}", :href => "#"}
+      %a.prettySocial.fa.fa-google-plus.fa-2x{"data-description" => "#{gist.title}", "data-type" => "googleplus", "data-url" => "https://gist.github.com/#{gist.github_id}", :href => "#"}
+      %a.prettySocial.fa.fa-linkedin.fa-2x{"data-description" => "#{gist.title}", "data-title" => "#{gist.title}", "data-type" => "linkedin", "data-url" => "https://gist.github.com/#{gist.github_id}", :href => "#"}

@@ -1,2 +1,2 @@
 $ ->
-  $('.prettySocial').prettySocial()
+  $('.prettySocial').prettySocial();
