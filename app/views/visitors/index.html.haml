@@ -1,36 +1,28 @@
-.row.clearfix
-  .col-md-6.column
-    .homepage= image_tag( 'homepage.png' )
-  .col-md-6.column
-    %h3
-      %b
-        Gist
-      Genius
-    %p
-      Lorem ipsum dolor sit amet,
-      = succeed "." do
-        %strong consectetur adipiscing elit
-      %em Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus.
-      %small Aliquam mi erat, aliquam vel luctus eu.
-    - if not user_signed_in?
-      .row.clearfix
-        .col-md-6.column
-          = link_to '<i class="fa fa-rocket"></i> Demo Login'.html_safe, sample_signin_path, :class =>"btn btn-default btn-lg btn-info"
-        .col-md-6.column
-          = link_to '<i class="fa fa-github-alt"></i> Signup'.html_safe, signin_path, :class =>"btn btn-default btn-lg btn-success"
-.row.clearfix
-  .col-md-4.column
-    %h2
-      Easy
-    %p
-      Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-  .col-md-4.column
-    %h2
-      Fast
-    %p
-      Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-  .col-md-4.column
-    %h2
-      Free
-    %p
-      Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+.home
+  .row.clearfix
+    .col-md-6.column
+      .homepage= image_tag( 'homepage.png' )
+    .col-md-6.column
+      %h3
+        =raw "<strong>Gist</strong>Genius"
+
+      %p
+        GistGenius is a simple app to search and organize your Gists. Login with your GitHub account, sync your gists and you're ready.
+
+      - if not user_signed_in?
+        .row.clearfix
+          .col-md-6.column
+            = link_to '<i class="fa fa-rocket"></i> Demo Login'.html_safe, sample_signin_path, :class =>"btn btn-default btn-lg btn-info"
+          .col-md-6.column
+            = link_to '<i class="fa fa-github-alt"></i> Signup'.html_safe, signin_path, :class =>"btn btn-default btn-lg btn-success"
+  .row.clearfix
+    .col-md-4.column
+      %h3
+        Tag your gists
+      %p
+        As soon as you sync your gists, GistGenius tag them with their own language. Then you can add as many tags as you want, and use them to filter and search trough your gists.
+    .col-md-4.column
+      %h3
+        Search and filter
+      %p
+        GistGenius search inside your gists tags, description and code. You can easily find your gists also using the tags you've created
