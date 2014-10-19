@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
   end
 
   def sample
-    sample_user = User.where(token: "d159172b0b6f5697d9ec5eebbf90c2082f97a798").first
+    sample_user = User.where(token: "45eae9fde5a7a7ce59401ef071f07dbc8e5924d4").first
     session[:user_id] = sample_user.id
     redirect_to user_url(current_user), :notice => 'Signed in!'
   end
