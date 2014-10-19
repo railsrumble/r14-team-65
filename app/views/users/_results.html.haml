@@ -2,12 +2,25 @@
 
 - gists.each do |gist|
   %div.result
-    .gist-title
-      %h5
-        = image_tag(gist.owner_avatar, class: "avatar")
-        = link_to gist.title, gist_path(gist)
-    = render 'gists/info', gist: gist
+    %header.gist-title
+      = image_tag(gist.owner_avatar, class: "avatar")
+      .title-block
+        %h5
+          = link_to gist.title, gist_path(gist)
+        = render 'gists/date', gist: gist
+      = render 'gists/info', gist: gist
     .tags
       %input.gist-input-tags(type="text" value="#{gist.tag_list}" data-gistid ="#{gist.id}")
-    .description
-      = auto_link(gist.description)
+    .bottom
+      .description
+        = auto_link(gist.description)
+      .gist-actions
+        %a.btn.btn-default.btn-xs{:href => "https://gist.github.com/#{gist.github_id}"}
+          %i.fa.fa-github
+          View in GitHub
+        %a.btn.btn-default.btn-xs{:href => "https://gist.github.com/#{gist.github_id}/download"}
+          %i.fa.fa-cloud-download
+          Download
+        %a.btn.btn-primary.btn-xs{:href => gist_path(gist)}
+          %i.fa.fa-cloud-download
+          Open

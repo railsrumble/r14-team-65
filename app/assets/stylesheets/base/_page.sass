@@ -21,6 +21,7 @@ section.search
     outline-width: 0
 
 section.tags, section.results .tags
+  clear: both
 
   .tag
     margin-right: 5px
@@ -58,24 +59,54 @@ section.results
       background-color: darken(#f6f6f6, 10%)
       color: darken(#f6f6f6, 70%)
 
-      .small
-        color: darken(#f6f6f6, 50%)
+    header.gist-title
+      position: relative
+      height: 50px
+      margin-top: 10px
 
-      .description
-        height: 68px
+      img
+        position: absolute
+        width: 50px
+        top: 0px
+        left: 0px
+        border-radius: 25px
 
+      .title-block
+        position: absolute
+        width: 43%
+        top: 0px
+        left: 50px
 
-    h4
-      margin-bottom: 5px
+        h5
+          margin: 5px
+
+        .date
+          margin: 0 0 0 5px
 
     .small
       color: gray
       font-size: 11px
+    .bottom
+      position: relative
+      height: 30px
 
-    .description
-      line-height: 17px
-      height: 34px
-      overflow: hidden
+      .description
+        line-height: 17px
+        height: 34px
+        overflow: hidden
+        max-width: 480px
+        width: 60%
+        position: absolute
+        left: 0
+        top: 0
+
+      .gist-actions
+        min-width: 230px
+        width: 40%
+        text-align: right
+        position: absolute
+        top: 0
+        left: 60%
 
     .selectize-control
       border: 0px
