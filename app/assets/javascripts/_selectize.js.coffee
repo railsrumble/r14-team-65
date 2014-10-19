@@ -1,5 +1,5 @@
 $ ->
-  $(".gist-tag").selectize
+  $(".gist-input-tags").selectize
     delimiter: ","
     persist: false
     valueField: 'name'
