@@ -10,10 +10,10 @@
   .gist-tags
     %input.gist-input-tags(type="text" value="#{gist.tag_list}")
   .gist-actions
-    %a.btn.btn-default.btn-xs{:href => "https://gist.github.com/#{gist.github_id}"}
+    %a.btn.btn-default.btn-xs{href: "https://gist.github.com/#{gist.github_id}", target: "_blank"}
       %i.fa.fa-github
       View in GitHub
-    %a.btn.btn-primary.btn-xs{:href => "https://gist.github.com/#{gist.github_id}/download"}
+    %a.btn.btn-primary.btn-xs{href: "https://gist.github.com/#{gist.github_id}/download"}
       %i.fa.fa-cloud-download
       Download
 
