@@ -54,8 +54,8 @@ $ ->
   $(document).on 're-selectize', ->
     selectize()
 
-  $(".selectize-control").on 'focusin', ->
+  $(".selectize-input").on 'focusin', ->
     $(this).addClass('selected')
 
-  $(".selectize-control").on 'focusout', ->
+  $(".selectize-input").on 'focusout', ->
     $(this).removeClass('selected')

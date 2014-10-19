@@ -10,7 +10,7 @@
     = render 'gists/info', gist: gist
   %p.description
     = auto_link(gist.description)
-  .gist-tags
+  .tags
     %input.gist-input-tags(type="text" value="#{gist.tag_list}" data-gistid ="#{gist.id}")
   = render 'actions', gist: gist
 

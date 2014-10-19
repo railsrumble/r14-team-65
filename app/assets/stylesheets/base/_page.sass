@@ -125,24 +125,24 @@ section.results
         top: 0
         left: 60%
 
-    .selectize-control
+.selectize-control
+  border: 0px
+
+  .selectize-input
+    background-color: transparent
+    border: 0px
+    padding: 0px
+    @include box-shadow(black 0px 0px 0px)
+
+    &.selected
+      background-color: white
+      padding: 5px
+      border-bottom: 2px solid #2196f3
+
+    div
+      background: transparent
       border: 0px
 
-      &.selected
-        background-color: white
-        padding: 5px
-        border-bottom: 2px solid #2196f3
-
-      .selectize-input
-        background-color: transparent
-        border: 0px
-        padding: 0px
-        @include box-shadow(black 0px 0px 0px)
-
-        div
-          background: transparent
-          border: 0px
-
-        [data-value]
-          background-image: -webkit-linear-gradient(top, #2196f3, #2196f3)
-          background-color: #2196f3
+    [data-value]
+      background-image: -webkit-linear-gradient(top, #2196f3, #2196f3)
+      background-color: #2196f3
