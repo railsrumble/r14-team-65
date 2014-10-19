@@ -1,1 +1,4 @@
 $('section.results').html("<%= j( render('users/results', gists: @gists) ) %>");
+
+$('section.results').removeClass('waiting');
+

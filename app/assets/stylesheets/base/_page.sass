@@ -32,6 +32,21 @@ section.tags, section.results .tags
       background-color: $blue
 
 section.results
+  position: relative
+  min-height: 15em
+
+  &.waiting
+    &:after
+      content: ' '
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0
+      left: 0
+      background: image_url('octocat-spinner.svg') no-repeat center 2em transparentize(white, 0.3)
+      background-size: 20% auto
+      z-index: 10
+
   .result
     height: auto
     padding: 1px 10px 10px
@@ -48,6 +63,7 @@ section.results
 
       .description
         height: 68px
+
 
     h4
       margin-bottom: 5px

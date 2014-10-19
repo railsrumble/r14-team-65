@@ -7,6 +7,8 @@ $ ->
   )()
 
   $(".container-fluid").on 'keyup', '#search', ->
+    $('section.results').addClass 'waiting'
+
     $('section.tags > span.tag.selected').removeClass 'selected'
 
     delay (=>
@@ -22,6 +24,8 @@ $ ->
     ), 500
 
   $(".container-fluid").on 'click', "section.tags > span.tag", ->
+    $('section.results').addClass 'waiting'
+
     $('#search').val('')
 
     $(@).toggleClass 'selected'
