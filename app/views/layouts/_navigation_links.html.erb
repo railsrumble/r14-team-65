@@ -1,6 +1,6 @@
 <%# add navigation links to this file %>
-<li><%= link_to 'Sync your Gists now!', sync_path , remote: true, method: :post %></li>
 <% if user_signed_in? %>
+	<li><%= link_to 'Sync your Gists now!', sync_path , remote: true, method: :post %></li>
   <li><%= link_to "#{current_user.name} (Sign out)", signout_path %></li>
 <% else %>
   <li><%= link_to 'Sign in', signin_path %></li>
