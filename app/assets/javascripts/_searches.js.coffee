@@ -9,7 +9,7 @@ $ ->
   $("#search").keyup ->
     delay (=>
       $.ajax(
-        url: 'searches/'
+        url: '/searches/'
         type: "GET"
         dataType: "json"
         data:
