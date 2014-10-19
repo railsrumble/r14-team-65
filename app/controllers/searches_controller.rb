@@ -30,11 +30,15 @@ class SearchesController < ApplicationController
     @user.gist_files.where("raw_content ILIKE ?", "%#{query}%").map(&:gist)
   end
 
+  def results_by_filename(query)
+    @user.gist_files.where("name ILIKE ?", "%#{query}%").map(&:gist)
+  end
+
   def search(query)
     if query.empty?
       @user.gists
     else
-      (results_by_description(query) + results_by_tag(query) + results_by_content(query)).flatten.uniq
+      (results_by_description(query) + results_by_tag(query) + results_by_content(query) + results_by_filename(query)).flatten.uniq
     end
   end
 
