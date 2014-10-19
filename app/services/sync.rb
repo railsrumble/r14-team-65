@@ -60,7 +60,10 @@ class Sync
       current_gist.files.each do |name, info|
         _.gist_files.create(name: name, raw_content: info.content)
         _.tag_list.add((info.language || '').downcase)
-        _.tag_list.add('starred') if starred?(gist)
+        if starred?(gist)
+          _.tag_list.add('starred')
+          _.starred = true
+        end
         _.save
       end
     end
