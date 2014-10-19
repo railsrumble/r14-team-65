@@ -9,7 +9,7 @@ class Gist < ActiveRecord::Base
   end
 
   def title
-  	description || gist_files.first.name
+  	gist_files.first.name || description
   end
 end
 

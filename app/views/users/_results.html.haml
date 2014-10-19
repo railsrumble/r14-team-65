@@ -2,7 +2,8 @@
 
 - gists.each do |gist|
   %div.result
-    %h4= gist.gist_files.first.name
+    %h4
+      = link_to gist.title, gist_path(gist)
     .small
       created today
     .tags

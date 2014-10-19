@@ -2,7 +2,7 @@
 <% if user_signed_in? %>
 	<li class="sync"><%= link_to 'Sync your Gists now!', sync_path , remote: true, method: :post, class: 'sync_button' %></li>
   <li>
-    <%= link_to "List your gists", user_path(current_user) %><%= link_to "(Sign out)", signout_path %></li>
+    <%= link_to "Your gists", user_path(current_user) %><%= link_to "Sign out", signout_path %></li>
 <% else %>
   <li><%= link_to 'Sign in', signin_path %></li>
 <% end %>
