@@ -6,7 +6,7 @@
       = gist.title
     = render 'gists/info', gist: gist
   %p.description
-    = gist.description
+    = auto_link(gist.description)
   .gist-tags
     %input.gist-input-tags(type="text" value="#{gist.tag_list}" data-gistid ="#{gist.id}")
   .gist-actions

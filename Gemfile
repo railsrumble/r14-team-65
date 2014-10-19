@@ -28,6 +28,7 @@ gem "title"
 gem "uglifier"
 gem "unicorn"
 gem 'honeybadger'
+gem 'rails_autolink'
 
 group :development do
   gem "spring"

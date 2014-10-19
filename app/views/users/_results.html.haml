@@ -10,4 +10,4 @@
     .tags
       %input.gist-input-tags(type="text" value="#{gist.tag_list}" data-gistid ="#{gist.id}")
     .description
-      = gist.description
+      = auto_link(gist.description)
