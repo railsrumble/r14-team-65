@@ -7,6 +7,8 @@ $ ->
   )()
 
   $(".container-fluid").on 'keyup', '#search', ->
+    $('section.tags > span.tag.selected').removeClass 'selected'
+
     delay (=>
       $.ajax(
         url: '/searches/'
@@ -20,6 +22,8 @@ $ ->
     ), 500
 
   $(".container-fluid").on 'click', "section.tags > span.tag", ->
+    $('#search').val('')
+
     $(@).toggleClass 'selected'
     texts = []
     $(@).parent().find('.selected').each ->
