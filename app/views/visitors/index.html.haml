@@ -1,38 +1,38 @@
-%section.tags
-  %h3 Filter by tags:
-  %span.tag.label.label-default
-    lorem
-  %span.tag.label.label-primary
-    ipsum
-  %span.tag.label.label-default
-    dolor
-
-%section.results
-  %h3 Results:
-  %div.result
-    %h4 GistGenius.rb
-    .small
-      created today
-    .tags
-      %span.tag.label.label-default
-        ruby
-      %span.tag.label.label-default
-        railsrumble
-      %span.tag.label.label-default
-        weekend
-    .description
-      Fusce quis interdum ligula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam eleifend, lacus vitae rutrum tincidunt, mi justo ultricies lorem, at cursus ex odio quis metus. Sed lacinia aliquet ornare. Ut condimentum libero id sem tempor pretium. Proin vel nibh lectus. Vivamus tempor ligula urna, nec porttitor ipsum molestie at.
-
-  %div.result
-    %h4 GistGenius.rb
-    .small
-      created today
-    .tags
-      %span.tag.label.label-default
-        ruby
-      %span.tag.label.label-default
-        railsrumble
-      %span.tag.label.label-default
-        weekend
-    .description
-      Fusce quis interdum ligula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam eleifend, lacus vitae rutrum tincidunt, mi justo ultricies lorem, at cursus ex odio quis metus. Sed lacinia aliquet ornare. Ut condimentum libero id sem tempor pretium. Proin vel nibh lectus. Vivamus tempor ligula urna, nec porttitor ipsum molestie at.
+.row.clearfix
+  .col-md-6.column
+    .homepage= image_tag( 'homepage.png' )
+  .col-md-6.column
+    %h3
+      %b
+        Gist
+      Genius
+    %p
+      Lorem ipsum dolor sit amet,
+      = succeed "." do
+        %strong consectetur adipiscing elit
+      %em Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus.
+      %small Aliquam mi erat, aliquam vel luctus eu.
+    - if not user_signed_in?
+      .row.clearfix
+        .col-md-6.column
+          %button.btn.btn-default.btn-lg.btn-info{:type => "button"}
+            %i.fa.fa-rocket
+            Demo Login
+        .col-md-6.column
+          = link_to '<i class="fa fa-github-alt"></i> Signup'.html_safe, signin_path, :class =>"btn btn-default btn-lg btn-success"
+.row.clearfix
+  .col-md-4.column
+    %h2
+      Easy
+    %p
+      Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+  .col-md-4.column
+    %h2
+      Fast
+    %p
+      Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+  .col-md-4.column
+    %h2
+      Free
+    %p
+      Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
