@@ -8,12 +8,13 @@ li.sync a
   &:hover
     color: black !important
 
-.navbar-collapse li
-  display: block
-  width: 100%
-  text-align: center
-  a
+@media all and (max-width: 768px)
+  .navbar-collapse li
     display: block
     width: 100%
-  &.disabled
-    display: none
+    text-align: center
+    a
+      display: block
+      width: 100%
+    &.disabled
+      display: none
