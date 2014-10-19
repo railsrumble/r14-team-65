@@ -68,29 +68,37 @@ section.results
       color: darken(#f6f6f6, 70%)
 
     header.gist-title
-      position: relative
-      height: 50px
       margin-top: 10px
+      float: left
+      width: 100%
+      margin-bottom: 0px
 
       img.avatar-list
-        position: absolute
-        width: 50px
-        top: 0px
-        left: 0px
-        border-radius: 25px
+        border-radius: 50%
         margin-top: 0
+        width: 50px
+        float: left
+        margin-right: 5px
 
       .title-block
-        position: absolute
-        width: 43%
-        top: 0px
-        left: 50px
+        float: left
+        overflow: hidden
 
         h5
-          margin: 5px
+          margin: 5px 0
 
         .date
-          margin: 0 0 0 5px
+
+          p
+            margin-bottom: 0px
+
+      .gist-info
+        width: 100%
+        overflow: hidden
+
+        .single-info
+          text-align: right
+
 
     .small
       color: gray
