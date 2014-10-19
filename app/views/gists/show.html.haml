@@ -4,21 +4,7 @@
     = image_tag(gist.owner_avatar, class: "avatar")
     %h2
       = gist.title
-  .date
-    %p
-      %i.fa.fa-calendar-o= " Updated #{distance_of_time_in_words(gist.last_update, Time.now)} ago"
-  .gist-info
-    .single-info
-      - if gist.public?
-        %i.fa.fa-unlock= " Public"
-      - else
-        %i.fa.fa-lock= " Private"
-    - if gist.starred?
-      .single-info
-        %i.fa.fa-star= " Starred"
-    - if gist.forked?
-      .single-info
-        %i.fa.fa-code-fork= " Forked from #{link_to gist.fork_url}".html_safe
+    = render 'gists/info', gist: gist
   %p.description
     = gist.description
   .gist-tags

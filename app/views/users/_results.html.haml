@@ -2,9 +2,11 @@
 
 - gists.each do |gist|
   %div.result
-    %h4
-      = link_to gist.title, gist_path(gist)
-    %small= " Updated #{distance_of_time_in_words(gist.last_update, Time.now)} ago"
+    .gist-title
+      %h5
+        = image_tag(gist.owner_avatar, class: "avatar")
+        = link_to gist.title, gist_path(gist)
+    = render 'gists/info', gist: gist
     .tags
       %input.gist-input-tags(type="text" value="#{gist.tag_list}" data-gistid ="#{gist.id}")
     .description
