@@ -6,7 +6,6 @@
     .small
       created today
     .tags
-      %input.gist-input-tags(type="text" value="#{gist.tag_list}")
+      %input.gist-input-tags(type="text" value="#{gist.tag_list}" data-gistid ="#{gist.id}")
     .description
       = gist.description
-

@@ -3,7 +3,12 @@ Rails.application.routes.draw do
   root to: 'visitors#index'
 
   resources :users, only: :show
-  resources :gists
+  resources :gists do
+    member do
+      post 'updatetags'
+    end
+  end
+
   resources :tags, only: :index
   resources :searches, only: :create
 

@@ -1,21 +1,16 @@
 $ ->
-
   selectize = () ->
 
-    $(".gist-input-tags").selectize
+    $(".gist-input-tags").selectize(
       delimiter: ","
       persist: false
       valueField: 'name'
       labelField: 'name'
       searchField: ['name']
-      create: true
       render:
         item: (item, escape) ->
           "<div class='tag'><span class='icon icon-book-close'></span>#{escape(item.name)}</div>"
-
-        success: (res) ->
-          callback res
-          return
+      create: true
 
       load: (query, callback) ->
         return callback() unless query.length
@@ -34,6 +29,26 @@ $ ->
             callback res
             return
 
+    ).on 'change', (value) ->
+      id = $(@).data('gistid')
+      taglist = value.currentTarget.value.split(',')
+
+      $.ajax
+        url: "/gists/#{id}/updatetags"
+        type: "POST"
+        dataType: "json"
+        data:
+          tag_list: taglist
+
+        error: ->
+          callback()
+          return
+
+        success: (res) ->
+          callback res
+          return
+
+
   selectize()
 
   $(document).on 're-selectize', ->
@@ -44,4 +59,3 @@ $ ->
 
   $(".selectize-control").on 'focusout', ->
     $(this).removeClass('selected')
-
