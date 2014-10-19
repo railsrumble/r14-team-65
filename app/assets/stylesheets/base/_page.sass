@@ -29,7 +29,7 @@ section.results
     margin-bottom: 10px
 
     &:hover
-      background-color: #2196f3
+      background-color: darken(#f6f6f6, 20%)
       color: #F6F6F6
 
       .small
@@ -53,9 +53,21 @@ section.results
     .selectize-control
       border: 0px
 
+      &.selected
+        background-color: white
+        padding: 5px
+        border-bottom: 2px solid #2196f3
+
       .selectize-input
         background-color: transparent
         border: 0px
+        padding: 0px
+        @include box-shadow(black 0px 0px 0px)
 
-        input:focus
-          background-color: white
+        div
+          background: transparent
+          border: 0px
+
+        [data-value]
+          background-image: -webkit-linear-gradient(top, #2196f3, #2196f3)
+          background-color: #2196f3

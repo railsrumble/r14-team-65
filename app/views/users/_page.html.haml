@@ -2,7 +2,7 @@
 = render "layouts/searchbar"
 = render "layouts/tag_cloud", user: user
 
-= render "results", user: user
+= render "results", gists: user.gists
 
 %table
   %thead

@@ -26,3 +26,9 @@ $ ->
         success: (res) ->
           callback res
           return
+
+  $(".selectize-control").on 'focusin', ->
+    $(this).addClass('selected')
+
+  $(".selectize-control").on 'focusout', ->
+    $(this).removeClass('selected')
