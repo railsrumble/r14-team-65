@@ -1,6 +1,29 @@
 %h3= "#{@user.name if @user.name} Gists!"
 = render "layouts/searchbar"
 = render "layouts/tag_cloud"
+
+%section.results
+  %h3 Results:
+
+  - @user.gists.each do |gist|
+    %div.result
+      %h4= gist.gist_files.first.name
+      .small
+        created today
+      .tags
+
+        = form_for gist, remote: true do |f|
+          = f.text_field :tag_list, class: 'gist-tag'
+
+        %span.tag.label.label-default
+          ruby
+        %span.tag.label.label-default
+          railsrumble
+        %span.tag.label.label-default
+          weekend
+      .description
+        = gist.description
+
 %table
   %thead
     %tr

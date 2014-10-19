@@ -1,5 +1,5 @@
 $ ->
-  $(".gist_tag_list").selectize
+  $(".gist-tag").selectize
     delimiter: ","
     persist: false
     valueField: 'name'
@@ -8,7 +8,7 @@ $ ->
     create: true
     render:
       item: (item, escape) ->
-        "<div><span class='icon icon-book-close'></span>#{escape(item.name)}</div>"
+        "<div class='tag'><span class='icon icon-book-close'></span>#{escape(item.name)}</div>"
 
     load: (query, callback) ->
       return callback() unless query.length
