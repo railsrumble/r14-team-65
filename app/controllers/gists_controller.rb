@@ -1,11 +1,15 @@
 class GistsController < ApplicationController
-  respond_to :js
+  respond_to :html, :js
 
   def update
     @gist = Gist.find(params[:id])
     @gist.update(gist_params)
 
     respond_with @gist
+  end
+
+  def show
+    @gist = Gist.find(params[:id])
   end
 
   private
