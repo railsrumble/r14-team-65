@@ -1,9 +1,14 @@
 class SearchesController < ApplicationController
-  respond_to :json
+  respond_to :js
 
-  def index
+  def create
     @user ||= current_user
-    @gists = search(params[:query])
+    if params[:type] == 'tag'
+      @gists = search_by_tag(params[:query])
+    else
+      @gists = search(params[:query])
+    end
+
     respond_with @gists
   end
 
@@ -30,6 +35,14 @@ class SearchesController < ApplicationController
       @user.gists
     else
       (results_by_description(query) + results_by_tag(query) + results_by_content(query)).flatten.uniq
+    end
+  end
+
+  def search_by_tag(query)
+    if query.nil?
+      @user.gists
+    else
+      @user.gists.tagged_with(query)
     end
   end
 end

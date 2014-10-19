@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :users, only: :show
   resources :gists
   resources :tags, only: :index
-  resources :searches, only: :index
+  resources :searches, only: :create
 
   get '/auth/:provider/callback' => 'sessions#create'
   get '/signin' => 'sessions#new', as: :signin
