@@ -1,11 +1,14 @@
-%h3= "#{@user.name if @user.name} Gists!"
+- user ||= @user
+
+%h3= "#{user.name if user.name} Gists!"
 = render "layouts/searchbar"
-= render "layouts/tag_cloud"
+= render "layouts/tag_cloud", user: user
 
 %section.results
   %h3 Results:
 
-  - @user.gists.each do |gist|
+
+  - user.gists.each do |gist|
     %div.result
       %h4= gist.gist_files.first.name
       .small
@@ -31,7 +34,8 @@
       %th Tags
       %th Files
   %tbody
-    - @user.gists.each do |gist|
+
+    - user.gists.each do |gist|
       %tr
         %td= gist.description || gist.gist_files.first.name
         %td
