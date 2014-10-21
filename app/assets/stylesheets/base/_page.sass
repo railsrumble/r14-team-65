@@ -57,7 +57,7 @@ section.tags, section.results .tags
     cursor: pointer
 
     &.selected
-      background-color: $blue
+      background-color: $primary
 
 section.results
   position: relative
@@ -160,7 +160,7 @@ section.results
           left: 0
           position: relative
 
-.selectize-control
+.selectize-control.multi
   border: 0px
 
   .selectize-input
@@ -170,16 +170,16 @@ section.results
     -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0)
     -moz-box-shadow:    0px 0px 0px 0px rgba(0, 0, 0, 0)
     box-shadow:         0px 0px 0px 0px rgba(0, 0, 0, 0)
-    
+
     &.selected, &:hover
       background-color: white
       padding: 5px
-      border-bottom: 2px solid #2196f3
+      border-bottom: 2px solid $primary
 
     @media all and (max-width: 767px)
       background-color: white
       padding: 5px
-      border-bottom: 2px solid #2196f3
+      border-bottom: 2px solid $primary
 
 
     div
@@ -187,8 +187,9 @@ section.results
       border: 0px
 
     [data-value]
-      background-image: -webkit-linear-gradient(top, #2196f3, #2196f3)
-      background-color: #2196f3
+      background-image: -webkit-linear-gradient(top, $primary, $primary) !important
+      background-color: $primary
+      border: 0px !important
 
 footer
   margin-bottom: 4em
