@@ -58,3 +58,8 @@ end
 group :staging, :production do
   gem "newrelic_rpm", ">= 3.7.3"
 end
+
+group :analyzers do
+  gem 'brakeman', require: false
+  gem 'bundler-audit', require: false
+end

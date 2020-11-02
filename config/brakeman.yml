@@ -1,0 +1,4 @@
+---
+:ensure_latest: true
+:run_all_checks: true
+:min_confidence: 1
