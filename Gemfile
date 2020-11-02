@@ -19,7 +19,7 @@ gem "omniauth"
 gem "omniauth-github"
 gem "pg", '~> 0.18'
 gem "rack-timeout"
-gem "rails", "5.2.4.3"
+gem "rails", "5.2.4.4"
 gem "recipient_interceptor"
 gem "responders"
 gem "sass-rails", "~> 5.0.0"
