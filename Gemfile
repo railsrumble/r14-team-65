@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "2.4.2"
+ruby "2.6.5"
 
 gem "acts-as-taggable-on"
 gem "airbrake"
@@ -19,7 +19,7 @@ gem "omniauth"
 gem "omniauth-github"
 gem "pg", '~> 0.18'
 gem "rack-timeout"
-gem "rails", "5.1.0"
+gem "rails", "5.2.4.3"
 gem "recipient_interceptor"
 gem "responders"
 gem "sass-rails", "~> 5.0.0"
