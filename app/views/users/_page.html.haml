@@ -13,4 +13,4 @@
   %center
     %h4= "You have no gists, yet. Go import them all!"
     .nogist_image= image_tag( 'octocat_sad.gif' )
-    = link_to 'Sync your gists now!', sync_path , remote: true, method: :post, class: 'sync_button btn btn-primary btn-lg'
+    = link_to 'Sync your gists now!', sync_path , remote: true, method: 'post', class: 'sync_button btn btn-primary btn-lg'
